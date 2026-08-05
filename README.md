@@ -49,7 +49,7 @@ src/
 
 ```bash
 git clone https://github.com/your-username/react-flashcards.git
-cd react-flashcards
+cd 007-Flashcard-Mini-Project-React
 ```
 
 **2. Install dependencies**
