@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter",
+    sans-serif;
+}
+
+body {
+  /* background-color: #f1f5f9; Soft off-white base */
+  background-color: #d4dbe1; /* Soft off-white base */
+  /* Layer 1: Dark vignette framing edges | Layer 2 & 3: Subtle grid pattern */
+  background-image:
+    radial-gradient(
+      ellipse at center,
+      rgba(241, 245, 249, 0.3) 20%,
+      rgba(17, 24, 39, 0.22) 100%
+    ),
+    linear-gradient(to right, rgba(17, 24, 39, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.05) 1px, transparent 1px);
+  background-size:
+    100% 100%,
+    32px 32px,
+    32px 32px;
+  background-attachment: fixed;
+  color: #111827;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827; /* Dark Gray */
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #2563eb; /* Brand Blue */
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}

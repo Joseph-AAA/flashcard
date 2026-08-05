@@ -1,0 +1,142 @@
+.flashcard-container {
+  width: 100%;
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flashcard-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow:
+    0 15px 35px -10px rgba(17, 24, 39, 0.07),
+    0 4px 12px rgba(17, 24, 39, 0.03);
+}
+
+/* Front Side: Semi-Transparent Frosted White Glass */
+.flashcard-front {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #111827;
+  transition: all 0.25s ease;
+}
+
+.flashcard-front:hover {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(37, 99, 235, 0.3); /* Subtle Blue highlight on hover */
+  transform: translateY(-2px);
+}
+
+/* Back Side: Translucent Soft Blue Tint Glass */
+.flashcard-back {
+  background: rgba(239, 246, 255, 0.7); /* Translucent soft blue tint */
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: #111827;
+  transform: rotateY(180deg);
+}
+
+.card-top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Translucent Emoji Pill */
+.card-emoji {
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.3rem 0.65rem;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.card-term {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: auto 0;
+  word-break: break-word;
+}
+
+.hint-text {
+  font-size: 0.75rem;
+  color: #14b8a6; /* Brand Teal */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Soft Orange Answer Pill on Back */
+.back-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ea580c; /* Brand Orange text */
+  background: rgba(249, 115, 22, 0.12);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+.card-definition {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #1e293b;
+  margin: auto 0;
+  word-break: break-word;
+}
+
+/* Translucent Delete Button */
+.delete-btn {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  color: #64748b;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.delete-btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+  transform: scale(1.05);
+}
