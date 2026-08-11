@@ -54,7 +54,7 @@ function addNewCard(e) {
     <div className="app-container">
       <div className="header">
         <h1 className="app-title">Flashcard App</h1>
-        <p>Interactive Flashcards by Learnex Spance Edu</p>
+        <p>Interactive Flashcards by Learnex Space Edu</p>
       </div>
        
        <FlashcardForm newTerm={newTerm} setNewTerm={setNewTerm} newDefinition={newDefinition} 
